@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0f8ff;
+    background-color: #f0f8ff; /* Azul claro para un fondo relajante */
 }
 
 header {
-    background-color: #ffcc00;
-    color: black;
+    background-color: #dcdcdc; /* Gris claro para un estilo elegante */
+    color: black; /* Texto negro para contraste */
     padding: 1em 0;
 }
 
@@ -17,7 +17,7 @@ main {
 }
 
 button {
-    background-color: #1e90ff;
+    background-color: #1e90ff; /* Azul vibrante para destacar */
     border: none;
     color: white;
     padding: 0.5em 1em;
@@ -29,5 +29,6 @@ button {
 #mensaje {
     margin-top: 1em;
     font-size: 1.2em;
-    color: #008000;
+    color: #008000; /* Verde para transmitir positividad */
 }
+
