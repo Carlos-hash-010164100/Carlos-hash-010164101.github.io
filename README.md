@@ -15,4 +15,5 @@ Este proyecto es un ejemplo básico de una página web estática que muestra un 
 2. Abre el archivo `index.html` en tu navegador.
 3. ¡Disfruta del saludo motivador!
 
-Este proyecto está diseñado para ser desplegado en **GitHub Pages**. ¡Puedes subirlo fácilmente y compartirlo con el mundo!
+## ENlace al sitio
+https://carlos-hash-010164100.github.io/Carlos-hash-010164101.github.io/
