@@ -1,4 +1,4 @@
 document.getElementById('boton').addEventListener('click', () => {
     const mensaje = document.getElementById('mensaje');
-    mensaje.textContent = 'Buen dia';
+    mensaje.textContent = ' Buen dia ';
 });
