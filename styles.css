@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: black; /* Fondo negro estilo CMD */
+    background-color: #f0f0f0; /* Gris claro */
     color: green; /* Texto verde */
 }
 
