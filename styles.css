@@ -5,14 +5,14 @@ body {
     padding: 0;
     text-align: center;
     background-color: #f0f0f0; /* Gris claro */
-    color: green; /* Texto verde */
+    color: black; /* Texto verde */
 }
 
 header {
-    background-color: black; /* Fondo negro */
-    color: green; /* Texto verde */
+    background-color: gray; /* Fondo gris */
+    color: black; /* Texto black */
     padding: 1em 0;
-    border-bottom: 1px solid green; /* Línea verde para separador */
+    border-bottom: 1px black; /* Línea verde para separador */
 }
 
 main {
@@ -21,8 +21,8 @@ main {
 
 button {
     background-color: #505050; /* Gris para el botón */
-    border: 1px solid green; /* Borde verde */
-    color: green; /* Texto verde */
+    border: 1px solid blue; /* Borde verde */
+    color: black; /* Texto verde */
     padding: 0.5em 1em;
     font-size: 1em;
     border-radius: 5px;
@@ -32,5 +32,5 @@ button {
 #mensaje {
     margin-top: 1em;
     font-size: 1.2em;
-    color: white; /* Texto blanco */
+    color: black; /* Texto blanco */
 }
