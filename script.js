@@ -1,4 +1,6 @@
 document.getElementById('boton').addEventListener('click', () => {
     const mensaje = document.getElementById('mensaje');
-    mensaje.textContent = '❤️'; // Cambiamos el texto por un corazón
+    const musica = document.getElementById('musica'); // Seleccionamos el audio
+    mensaje.textContent = '🎂 ¡Feliz Cumpleaños, hermana! 🎉'; // Cambiamos el mensaje
+    musica.play(); // Reproducimos la música
 });
