@@ -1,5 +1,5 @@
 body {
-    font-family: 'Verdana', sans-serif; /* Fuente clara y festiva */
+    font-family: 'Verdana', sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -9,7 +9,7 @@ body {
 
 header {
     background-color: #ff8e8e; /* Rosa vibrante */
-    color: white; /* Texto blanco */
+    color: white;
     padding: 1em 0;
     border-bottom: 3px solid #c70039; /* Línea destacada */
 }
@@ -20,13 +20,13 @@ main {
 
 button {
     background-color: #f9c74f; /* Amarillo brillante */
-    border: none; /* Sin bordes */
-    color: #3a3a3a; /* Texto oscuro */
+    border: none;
+    color: #3a3a3a;
     padding: 0.8em 2em;
     font-size: 1.2em;
     border-radius: 10px; /* Botón amigable */
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto dinámico */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
@@ -38,6 +38,12 @@ button:hover {
     margin-top: 1em;
     font-size: 1.6em; /* Texto destacado */
     color: #9b2226; /* Rojo cálido */
-    font-weight: bold; /* Enfático */
-    font-style: italic; /* Elegante */
+    font-weight: bold;
+    font-style: italic;
 }
+
+#imagen {
+    display: block;
+    margin: 0 auto; /* Centrar imagen */
+}
+
