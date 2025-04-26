@@ -1,17 +1,17 @@
 body {
-    font-family: 'Arial', sans-serif; /* Fuente moderna y profesional */
+    font-family: 'Verdana', sans-serif; /* Fuente clara y festiva */
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #1a1a1a; /* Fondo oscuro para un estilo sobrio */
-    color: #d3d3d3; /* Gris claro para contraste */
+    background-color: #f8e8ff; /* Fondo pastel suave */
+    color: #5a5a5a; /* Gris elegante */
 }
 
 header {
-    background-color: #333333; /* Fondo gris oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #ff8e8e; /* Rosa vibrante */
+    color: white; /* Texto blanco */
     padding: 1em 0;
-    border-bottom: 2px solid #666666; /* Línea gris para separador */
+    border-bottom: 3px solid #c70039; /* Línea destacada */
 }
 
 main {
@@ -19,23 +19,25 @@ main {
 }
 
 button {
-    background-color: #4d4d4d; /* Gris metálico para un toque masculino */
-    border: none; /* Sin borde para un diseño limpio */
-    color: #ffffff; /* Texto blanco */
-    padding: 0.7em 1.5em;
-    font-size: 1.1em;
-    border-radius: 5px; /* Botón ligeramente redondeado */
+    background-color: #f9c74f; /* Amarillo brillante */
+    border: none; /* Sin bordes */
+    color: #3a3a3a; /* Texto oscuro */
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    border-radius: 10px; /* Botón amigable */
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Efecto suave */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto dinámico */
 }
 
 button:hover {
-    background-color: #666666; /* Tonalidad más clara en hover */
+    background-color: #f8961e; /* Tonalidad más cálida */
+    transform: scale(1.1); /* Agrandamos en hover */
 }
 
 #mensaje {
     margin-top: 1em;
-    font-size: 1.5em; /* Texto más grande y llamativo */
-    color: #999999; /* Gris medio para un toque profesional */
-    font-weight: bold; /* Texto fuerte para impacto */
+    font-size: 1.6em; /* Texto destacado */
+    color: #9b2226; /* Rojo cálido */
+    font-weight: bold; /* Enfático */
+    font-style: italic; /* Elegante */
 }
