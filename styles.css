@@ -1,18 +1,17 @@
-
 body {
-    font-family: monospace; /* Fuente de consola */
+    font-family: 'Courier New', Courier, monospace; /* Un estilo limpio y clásico */
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #f0f0f0; /* Gris claro */
-    color: black; /* Texto verde */
+    background-color: #ffe6e6; /* Suave tono rosado para amor */
+    color: #333; /* Texto gris oscuro para legibilidad */
 }
 
 header {
-    background-color: gray; /* Fondo gris */
-    color: black; /* Texto black */
+    background-color: #ff99c2; /* Fondo rosa pastel romántico */
+    color: white; /* Texto blanco */
     padding: 1em 0;
-    border-bottom: 1px black; /* Línea verde para separador */
+    border-bottom: 2px solid #ff4d94; /* Línea vibrante para separador */
 }
 
 main {
@@ -20,17 +19,23 @@ main {
 }
 
 button {
-    background-color: #505050; /* Gris para el botón */
-    border: 1px solid blue; /* Borde verde */
-    color: black; /* Texto verde */
-    padding: 0.5em 1em;
-    font-size: 1em;
-    border-radius: 5px;
+    background-color: #ff4d94; /* Rosa fuerte para resaltar amor */
+    border: none; /* Sin borde para un diseño limpio */
+    color: white; /* Texto blanco */
+    padding: 0.7em 1.5em;
+    font-size: 1.1em;
+    border-radius: 25px; /* Botón redondeado, delicado */
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto suave */
+}
+
+button:hover {
+    background-color: #e60073; /* Tonalidad más oscura en hover */
 }
 
 #mensaje {
     margin-top: 1em;
-    font-size: 1.2em;
-    color: black; /* Texto blanco */
+    font-size: 1.5em; /* Texto más grande */
+    color: #b30047; /* Rojo oscuro romántico */
+    font-style: italic; /* Toque elegante */
 }
