@@ -3,15 +3,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(135deg, #ffcc70, #ff8e8e); /* Gradiente inspirador */
-    color: #333;
+    background: linear-gradient(135deg, #ffefd3, #f8d7ff); /* Tonos pastel suaves */
+    color: #555; /* Gris más claro */
 }
 
 header {
-    background-color: #ff5733; /* Rojo intenso */
+    background-color: #ffb5a7; /* Rosa suave */
     color: white;
     padding: 1em 0;
-    border-bottom: 4px solid #c70039;
+    border-bottom: 4px solid #ff758f; /* Borde delicado */
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -21,9 +21,9 @@ main {
 }
 
 button {
-    background-color: #3a86ff; /* Azul llamativo */
+    background-color: #ffc8dd; /* Rosa pastel */
     border: none;
-    color: white;
+    color: #3a3a3a;
     padding: 0.8em 2em;
     font-size: 1.2em;
     border-radius: 10px;
@@ -32,20 +32,21 @@ button {
 }
 
 button:hover {
-    background-color: #8338ec; /* Cambio a morado brillante */
-    transform: scale(1.1);
+    background-color: #ffafcc; /* Cambio a rosa más suave */
+    transform: scale(1.05);
 }
 
 #mensaje {
     margin-top: 1em;
     font-size: 1.8em;
-    color: #ff006e; /* Rojo vibrante */
+    color: #6a4c93; /* Morado elegante */
     font-weight: bold;
     font-style: italic;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
+    from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
