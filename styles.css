@@ -52,7 +52,4 @@ button:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-em {
-    font-style: normal;
-    text-decoration: underline;
-}
+
