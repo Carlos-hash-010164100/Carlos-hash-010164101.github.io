@@ -11,10 +11,10 @@ header {
     background-color: #111; /* Negro profundo */
     color: #fff;
     padding: 1em 0;
-    border-bottom: 4px solid #fff; /* Línea de separación blanca */
+    border-bottom: 4px solid #fff;
     font-size: 1.5em;
     font-weight: bold;
-    font-style: italic; /* Letras en cursiva */
+    font-style: italic;
 }
 
 main {
@@ -22,28 +22,28 @@ main {
 }
 
 button {
-    background-color: #fff; /* Botón blanco */
+    background-color: #fff;
     border: 2px solid #fff;
     color: black;
     padding: 0.8em 2em;
     font-size: 1.2em;
     border-radius: 10px;
     cursor: pointer;
-    font-style: italic; /* Letras en cursiva */
+    font-style: italic;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ddd; /* Gris claro refinado */
+    background-color: #ddd;
     transform: scale(1.05);
 }
 
 #mensaje {
     margin-top: 1em;
     font-size: 1.8em;
-    color: #fff; /* Blanco elegante */
+    color: #fff;
     font-weight: bold;
-    font-style: italic; /* Letras en cursiva */
+    font-style: italic;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -53,6 +53,8 @@ button:hover {
 }
 
 #perro {
-      border: 1px solid black;
-      padding: 2px;
-   }
+    border: 1px solid black;
+    padding: 2px;
+    background-color: red; /* Color llamativo para pruebas */
+}
+
