@@ -3,15 +3,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(135deg, #f6f5f2, #c6d8d3); /* Beige y azul grisáceo */
-    color: #444; /* Gris oscuro pero suave */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
 }
 
 header {
-    background-color: #a7c957; /* Verde apagado */
-    color: white;
+    background-color: #111; /* Negro profundo */
+    color: #fff;
     padding: 1em 0;
-    border-bottom: 4px solid #6a994e; /* Verde más oscuro */
+    border-bottom: 4px solid #444; /* Línea de separación gris */
     font-size: 1.5em;
     font-weight: bold;
 }
@@ -21,8 +21,8 @@ main {
 }
 
 button {
-    background-color: #8d99ae; /* Azul grisáceo elegante */
-    border: none;
+    background-color: #222; /* Negro elegante */
+    border: 2px solid #fff;
     color: white;
     padding: 0.8em 2em;
     font-size: 1.2em;
@@ -32,14 +32,14 @@ button {
 }
 
 button:hover {
-    background-color: #6c757d; /* Gris azulado más discreto */
+    background-color: #444; /* Gris oscuro refinado */
     transform: scale(1.05);
 }
 
 #mensaje {
     margin-top: 1em;
     font-size: 1.8em;
-    color: #5a5a5a; /* Gris neutro y elegante */
+    color: #ccc; /* Gris claro elegante */
     font-weight: bold;
     font-style: italic;
     animation: fadeIn 1.5s ease-in-out;
