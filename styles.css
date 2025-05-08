@@ -11,9 +11,10 @@ header {
     background-color: #111; /* Negro profundo */
     color: #fff;
     padding: 1em 0;
-    border-bottom: 4px solid #444; /* Línea de separación gris */
+    border-bottom: 4px solid #fff; /* Línea de separación blanca */
     font-size: 1.5em;
     font-weight: bold;
+    font-style: italic; /* Letras en cursiva */
 }
 
 main {
@@ -21,27 +22,28 @@ main {
 }
 
 button {
-    background-color: #222; /* Negro elegante */
+    background-color: #fff; /* Botón blanco */
     border: 2px solid #fff;
-    color: white;
+    color: black;
     padding: 0.8em 2em;
     font-size: 1.2em;
     border-radius: 10px;
     cursor: pointer;
+    font-style: italic; /* Letras en cursiva */
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #444; /* Gris oscuro refinado */
+    background-color: #ddd; /* Gris claro refinado */
     transform: scale(1.05);
 }
 
 #mensaje {
     margin-top: 1em;
     font-size: 1.8em;
-    color: #ccc; /* Gris claro elegante */
+    color: #fff; /* Blanco elegante */
     font-weight: bold;
-    font-style: italic;
+    font-style: italic; /* Letras en cursiva */
     animation: fadeIn 1.5s ease-in-out;
 }
 
