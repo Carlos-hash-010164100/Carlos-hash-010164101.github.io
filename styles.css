@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background-color: #1a1a1a; /* Fondo elegante oscuro */
-    color: #FFA500; /* Naranja brillante para energía */
+    background-color: #1a1a1a;
+    color: #FFA500;
 }
 
 header {
-    background: rgba(255, 165, 0, 0.2); /* Tono cálido */
+    background: rgba(255, 165, 0, 0.2);
     color: #FFA500;
     padding: 1em;
     border-bottom: 2px solid #FFA500;
@@ -47,4 +47,5 @@ button:hover {
     background-color: #222222;
     transform: scale(1.05);
 }
+
 
