@@ -1,4 +1,4 @@
-class Bit {
+// class Bit {
     constructor(creador, visitante) {
         this.creador = creador;
         this.visitante = visitante.toLowerCase();
