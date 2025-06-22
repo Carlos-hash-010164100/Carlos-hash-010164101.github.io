@@ -27,9 +27,32 @@ function iniciarGustavo() {
 }
 
 function iniciarGris() {
+  // Mensaje de bienvenida para Gris
   saludo.innerHTML = `Hola Gris 🌫️<br> Siempre tan misteriosa como brillante.`;
-  pregunta.textContent = `¿Qué te hace sentir viva?`;
+  pregunta.textContent = `Si pudieras tener un pastel ahora mismo... ¿de qué sabor lo pedirías?`;
+
+  // Personalizamos el botón "Continuar" solo para Gris
+  continuarBtn.onclick = () => {
+    const sabor = document.getElementById('respuestaUsuario').value.trim();
+
+    if (sabor !== "") {
+      mensajeEspecial.innerHTML = `
+        <p>✨ Un pastel de <strong>${sabor}</strong>... suena delicioso 😋</p>
+        <pre style="color: #d2a8ff; font-size: 0.85em; line-height: 1.2em;">
+            ,   ,   ,   ,
+           ||||| ||||| |||||
+        ===@@@@@@@@@@@@@@@@@===
+        |||||||||||||||||||||||
+        |||||||||||||||||||||||
+        ~~~~~~~~~~~~~~~~~~~~~~~
+        🎂 Feliz pastel, Gris 🎂
+        </pre>
+      `;
+      desafio.style.display = 'none';
+    }
+  };
 }
+
 
 function iniciarBassman() {
   // Mensaje inicial personalizado
