@@ -1,12 +1,18 @@
 /* Estilos globales del cuerpo de la página */
 body {
   font-family: 'Poppins', sans-serif;  /* Tipografía limpia y moderna */
-  margin: 0;                           /* Quita márgenes por defecto */
-  padding: 0 1em 3em 1em;              /* Espaciado interno (último valor es inferior) */
-  background-color: #0d1117;           /* Fondo oscuro elegante */
-  color: #58a6ff;                      /* Texto azul claro */
-  text-align: center;                  /* Centra todos los textos por defecto */
+  margin: 0;
+  padding: 0 1em 3em 1em;
+  background-image: url('casino-fondo.jpg'); /* Imagen de fondo: entrada elegante al casino */
+  background-size: cover;              /* La imagen cubrirá todo el fondo */
+  background-position: center;         /* Centrada horizontalmente y verticalmente */
+  background-repeat: no-repeat;        /* No se repite la imagen */
+  background-attachment: fixed;        /* Hace que el fondo permanezca fijo al hacer scroll */
+  background-color: #0d1117;           /* Color de fondo de respaldo si la imagen no carga */
+  color: #58a6ff;                      /* Color de texto */
+  text-align: center;
 }
+
 
 /* Contenedor principal con ancho máximo */
 .contenedor {
