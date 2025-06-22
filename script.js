@@ -45,12 +45,12 @@ function iniciarBassman() {
         <p><strong>Excelente melodía.</strong></p>
         <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>
         Sigue esforzándote. 🎸</p>
-        
-      ;
+      `;
       desafio.style.display = 'none';
     }
   };
 }
+
 
 
 function iniciarChinikis() {
