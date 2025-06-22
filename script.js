@@ -25,19 +25,24 @@ function iniciarGustavo() {
   saludo.innerHTML = `Bien, Gustavo.<br> Eres un clásico. Sabemos que vienes con la mejor actitud.`;
   pregunta.textContent = `¿Qué te motiva a seguir creyendo?`;
 }
-
 function iniciarGris() {
-  // Mensaje de bienvenida para Gris
+  // 🟣 Mostramos un mensaje de bienvenida especial para Gris
   saludo.innerHTML = `Hola Gris 🌫️<br> Siempre tan misteriosa como brillante.`;
+
+  // 🟣 Preguntamos su sabor de pastel favorito
   pregunta.textContent = `Si pudieras tener un pastel ahora mismo... ¿de qué sabor lo pedirías?`;
 
-  // Personalizamos el botón "Continuar" solo para Gris
+  // 🟣 Definimos qué ocurre al hacer clic en el botón "Continuar", exclusivamente para Gris
   continuarBtn.onclick = () => {
+    // 🟣 Obtenemos la respuesta del campo de texto y la guardamos en la variable 'sabor'
     const sabor = document.getElementById('respuestaUsuario').value.trim();
 
+    // 🟣 Validamos que se haya ingresado algún sabor
     if (sabor !== "") {
+      // 🟣 Mostramos un mensaje personalizado con el sabor elegido e incluimos un pastel en arte ASCII
       mensajeEspecial.innerHTML = `
-        <p>✨ Un pastel de <strong>${sabor}</strong>... suena delicioso 😋</p>
+        <p>✨ Un pastel de <strong>${sabor}</strong>... suena delicioso. Sabia que elejirias ese sabor, te lo debo. Saludos por sierto que bien te ves de negro.</p>
+
         <pre style="color: #d2a8ff; font-size: 0.85em; line-height: 1.2em;">
             ,   ,   ,   ,
            ||||| ||||| |||||
@@ -45,9 +50,11 @@ function iniciarGris() {
         |||||||||||||||||||||||
         |||||||||||||||||||||||
         ~~~~~~~~~~~~~~~~~~~~~~~
-        🎂 Feliz pastel, Gris 🎂
+        🎂 Suerte, Gris 🎂
         </pre>
       `;
+
+      // 🟣 Ocultamos la sección de pregunta para mostrar solo el mensaje final
       desafio.style.display = 'none';
     }
   };
