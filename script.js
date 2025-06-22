@@ -63,7 +63,7 @@ function iniciarGris() {
 
 function iniciarBassman() {
   // Mensaje inicial personalizado
-  saludo.innerHTML = `Bassman, el ritmo te precede.<br>Bienvenido a tu sala de afinación interior.`;
+  saludo.innerHTML = `Saludos Gustavo, La musica si es un arte.`;
   pregunta.textContent = `¿Qué melodía guía tus pasos últimamente?`;
 
   // Redefinir el evento del botón "Continuar" solo para Bassman
@@ -75,6 +75,7 @@ function iniciarBassman() {
         <p><strong>Excelente melodía.</strong></p>
         <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>
         Sigue esforzándote. 🎸</p>
+        <p>"Tenemos el arte para no morir de la verdad." <br>Friedrich Nietzsche</p>
       `;
       desafio.style.display = 'none';
     }
