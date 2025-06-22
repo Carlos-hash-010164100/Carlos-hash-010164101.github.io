@@ -1,49 +1,51 @@
 // 🎮 Botones de interacción
-const iniciarBtn = document.getElementById('iniciar');       // Botón para comenzar la historia
-const continuarBtn = document.getElementById('continuar');   // Botón para avanzar a la siguiente sección
+const iniciarBtn = document.getElementById('iniciar');
+const continuarBtn = document.getElementById('continuar');
 
-// 🗂️ Secciones principales de la interfaz
-const intro = document.getElementById('intro');              // Bloque de introducción
-const desafio = document.getElementById('desafio');          // Sección para la siguiente pregunta
+// 🗂️ Secciones principales
+const intro = document.getElementById('intro');
+const desafio = document.getElementById('desafio');
 
-// 📝 Elementos dinámicos donde se escribe contenido
-const saludo = document.getElementById('saludoPersonalizado');     // Mensaje de bienvenida personalizado
-const pregunta = document.getElementById('preguntaSiguiente');     // Pregunta dirigida
-const mensajeEspecial = document.getElementById('mensajeEspecial');// Respuesta final o despedida
+// 📝 Elementos dinámicos
+const saludo = document.getElementById('saludoPersonalizado');
+const pregunta = document.getElementById('preguntaSiguiente');
+const mensajeEspecial = document.getElementById('mensajeEspecial');
 
-// 🎵 Reproductor de audio
+// 🎵 Música
 const musica = document.getElementById('musica');
 
-// 🧠 Variable para almacenar el nombre original
+// 🧠 Nombre original
 let nombre = "";
 
-// 👥 Lista de usuarios reconocidos en minúsculas
+// 👥 Nombres válidos
 const nombresPermitidos = ["gustavo", "gris", "griselda", "bassman", "chinikis", "eduardo", "luis"];
 
-
-// 📦 Funciones personalizadas para cada persona
+// 🧩 Funciones personalizadas
 function iniciarGustavo() {
   saludo.innerHTML = `Bien, Gustavo.<br> Eres un clásico. Sabemos que vienes con la mejor actitud.`;
   pregunta.textContent = `¿Qué te motiva a seguir creyendo?`;
-}
-function iniciarGris() {
-  // 🟣 Mostramos un mensaje de bienvenida especial para Gris
-  saludo.innerHTML = `Hola Gris 🌫️<br> Siempre tan misteriosa como brillante.`;
 
-  // 🟣 Preguntamos su sabor de pastel favorito
+  continuarBtn.onclick = () => {
+    const respuesta = document.getElementById('respuestaUsuario').value.trim();
+    if (respuesta !== "") {
+      mensajeEspecial.innerHTML = `
+        <p><strong>${nombre}</strong>, tu fuerza interior es real. Mantente firme.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+      `;
+      desafio.style.display = 'none';
+    }
+  };
+}
+
+function iniciarGris() {
+  saludo.innerHTML = `Hola Gris 🌫️<br> Siempre tan misteriosa como brillante.`;
   pregunta.textContent = `Si pudieras tener un pastel ahora mismo... ¿de qué sabor lo pedirías?`;
 
-  // 🟣 Definimos qué ocurre al hacer clic en el botón "Continuar", exclusivamente para Gris
   continuarBtn.onclick = () => {
-    // 🟣 Obtenemos la respuesta del campo de texto y la guardamos en la variable 'sabor'
     const sabor = document.getElementById('respuestaUsuario').value.trim();
-
-    // 🟣 Validamos que se haya ingresado algún sabor
     if (sabor !== "") {
-      // 🟣 Mostramos un mensaje personalizado con el sabor elegido e incluimos un pastel en arte ASCII
       mensajeEspecial.innerHTML = `
-        <p>✨ Un pastel de <strong>${sabor}</strong>... suena delicioso. Sabia que elejirias ese sabor, te lo debo. Saludos por sierto que bien te ves de negro.</p>
-
+        <p>✨ Un pastel de <strong>${sabor}</strong>... suena delicioso. Sabía que elegirías ese sabor, te lo debo. Saludos, por cierto qué bien te ves de negro.</p>
         <pre style="color: #d2a8ff; font-size: 0.85em; line-height: 1.2em;">
             ,   ,   ,   ,
            ||||| ||||| |||||
@@ -53,106 +55,115 @@ function iniciarGris() {
         ~~~~~~~~~~~~~~~~~~~~~~~
         🎂 Suerte, Gris 🎂
         </pre>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
       `;
-
-      // 🟣 Ocultamos la sección de pregunta para mostrar solo el mensaje final
       desafio.style.display = 'none';
     }
   };
 }
 
-
 function iniciarBassman() {
-  // Mensaje inicial personalizado
-  saludo.innerHTML = `Saludos Gustavo, La musica si es un arte.`;
+  saludo.innerHTML = `Saludos Gustavo, La música sí es un arte.`;
   pregunta.textContent = `¿Qué melodía guía tus pasos últimamente?`;
 
-  // Redefinir el evento del botón "Continuar" solo para Bassman
   continuarBtn.onclick = () => {
     const respuesta = document.getElementById('respuestaUsuario').value.trim();
-
     if (respuesta !== "") {
       mensajeEspecial.innerHTML = `
         <p><strong>Excelente melodía.</strong></p>
-        <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>
-        Sigue esforzándote. 🎸</p>
-        <p>"Tenemos el arte para no morir de la verdad." <br>Friedrich Nietzsche</p>
+        <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>Sigue esforzándote. 🎸</p>
+        <p>"Tenemos el arte para no morir de la verdad."<br>– Friedrich Nietzsche</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
-
-
 function iniciarChinikis() {
   saludo.innerHTML = `Chinikis 😄<br> ¿Otra vez salvando el día? Adelante, esta es tu casa.`;
-  pregunta.textContent = `Recuerda que la ruta rapida, no siempre y casi nunca es la mas segura. Saludos Saca el kikiriki`;
+  pregunta.textContent = `Recuerda que la ruta rápida, no siempre y casi nunca es la más segura. Saludos, saca el kikirikí.`;
+
+  continuarBtn.onclick = () => {
+    const respuesta = document.getElementById('respuestaUsuario').value.trim();
+    if (respuesta !== "") {
+      mensajeEspecial.innerHTML = `
+        <p>⚡ Gracias por estar aquí, <strong>${nombre}</strong>. Confía en tu camino.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+      `;
+      desafio.style.display = 'none';
+    }
+  };
 }
 
 function iniciarEduardo() {
   saludo.innerHTML = `Eduardo, mente brillante y corazón leal.<br> Este espacio está hecho para ti.`;
   pregunta.textContent = `¿Qué propósito te empuja a levantarte cada mañana?`;
+
+  continuarBtn.onclick = () => {
+    const respuesta = document.getElementById('respuestaUsuario').value.trim();
+    if (respuesta !== "") {
+      mensajeEspecial.innerHTML = `
+        <p><strong>${nombre}</strong>, sigue siendo ejemplo de integridad y visión. El mundo te necesita despierto.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+      `;
+      desafio.style.display = 'none';
+    }
+  };
 }
 
-// 🚪 Evento para cuando se hace clic en "Comenzar"
+// 🚪 Evento para comenzar
 iniciarBtn.addEventListener('click', () => {
-  const nombreOriginal = document.getElementById('nombreUsuario').value.trim();     // Nombre tal como lo escribió el usuario
-  const nombreInput = nombreOriginal.toLowerCase();                                 // Nombre convertido a minúsculas para comparar
+  const nombreOriginal = document.getElementById('nombreUsuario').value.trim();
+  const nombreInput = nombreOriginal.toLowerCase();
 
   if (nombreInput !== "") {
     if (nombresPermitidos.includes(nombreInput)) {
-      nombre = nombreOriginal; // Guardamos el original para mostrarlo con estilo
+      nombre = nombreOriginal;
 
-switch (nombreInput) {
-  case "gustavo":
-  case "bassman":
-    iniciarBassman(); // Ambos activan el bloque de Bassman
-    break;
+      switch (nombreInput) {
+        case "gustavo":
+        case "bassman":
+          iniciarBassman();
+          break;
+        case "gris":
+        case "griselda":
+          iniciarGris();
+          break;
+        case "chinikis":
+        case "eduardo":
+        case "luis":
+          iniciarChinikis();
+          break;
+        default:
+          mensajeEspecial.innerHTML = `
+            <p><strong>${nombreOriginal}</strong>, no se reconoce este nombre... pero el viaje aún puede comenzar.</p>
+            <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+          `;
+          return;
+      }
 
-  case "gris":
-  case "griselda":
-    iniciarGris(); // Ambas activan el bloque de Gris
-    break;
-
-  case "chinikis":
-  case "eduardo":
-  case "luis":
-    iniciarChinikis(); // Comparten bloque de Chinikis
-    break;
-
-  default:
-    // Si llegara a pasar, aunque ya filtramos antes
-    mensajeEspecial.innerHTML = `
-      <p><strong>${nombreOriginal}</strong>, no se reconoce este nombre... pero el viaje aún puede comenzar.</p>
-    `;
-    break;
-}
-
-
-      // Mostramos la siguiente sección y reproducimos música
       intro.style.display = 'none';
       desafio.style.display = 'block';
       musica.play();
     } else {
-      // Si el nombre no está en la lista, mostramos este mensaje
       mensajeEspecial.innerHTML = `
         <p><strong>${nombreOriginal}</strong>, el creador no te reconoció en su lista... pero cada quien forja su propio destino.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
       `;
     }
   }
 });
 
-// 🔄 Evento para cuando se hace clic en "Continuar"
+// 🔁 Fallback por si no hay función personalizada
 continuarBtn.addEventListener('click', () => {
   const respuesta = document.getElementById('respuestaUsuario').value.trim();
 
   if (respuesta !== "") {
     mensajeEspecial.innerHTML = `
       <p><em>${nombre}</em>, nunca olvides que tu motivación — <strong>${respuesta}</strong> — es tu superpoder. ¡Sigue adelante!</p>
+      <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
     `;
-
-    // Ocultamos la sección de preguntas y mostramos el mensaje final
     desafio.style.display = 'none';
   }
 });
