@@ -1,69 +1,36 @@
+/* Fondo y texto */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0 1em 3em 1em; /* Espacio lateral e inferior */
-  background-color: black;
-  color: #FFA500;
-  text-align: center;
+  background-color: #0d1117; /* negro con un toque azulado elegante */
+  color: #58a6ff; /* azul claro */
 }
 
-.contenedor {
-  max-width: 900px;
-  margin: 0 auto; /* Centra el contenido horizontalmente */
-}
-
+/* Encabezado */
 header {
-  background: rgba(255, 165, 0, 0.2);
-  padding: 1em;
-  border-bottom: 2px solid #FFA500;
-  font-size: 1.8em;
-  font-style: italic;
-  text-shadow: 0px 0px 10px #FFA500;
+  background: rgba(88, 166, 255, 0.1); /* fondo translúcido en azul */
+  border-bottom: 2px solid #58a6ff;
+  color: #58a6ff;
+  text-shadow: 0px 0px 10px #58a6ff;
 }
 
+/* Texto brillante */
 #mensaje {
-  margin-top: 2em;
-  font-size: 2em;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: 0px 0px 15px #FFA500;
-  animation: brillo 2s infinite alternate;
+  color: #d2a8ff; /* lavanda brillante */
+  text-shadow: 0px 0px 15px #d2a8ff;
 }
 
-@keyframes brillo {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
-}
-
-#gipy {
-  width: 450px;
-  height: 500px;
-  display: block;
-  margin: 2em auto;
-}
-
+/* Botón */
 button {
-  background-color: black;
-  border: 2px solid #FFA500;
-  color: #FFA500;
-  padding: 0.8em 2em;
-  font-size: 1.2em;
-  border-radius: 10px;
-  cursor: pointer;
-  font-style: italic;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: transparent;
+  border: 2px solid #d2a8ff;
+  color: #d2a8ff;
 }
 
 button:hover {
-  background-color: #222222;
-  transform: scale(1.05);
+  background-color: #161b22; /* gris muy oscuro */
 }
 
+/* Footer */
 footer {
-  margin-top: 3em;
-  padding: 2em;
-  font-style: italic;
-  font-size: 0.9em;
-  color: #FFA500;
-  border-top: 1px solid #FFA500;
+  color: #8b949e; /* gris suave */
+  border-top: 1px solid #30363d;
 }
