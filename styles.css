@@ -22,26 +22,20 @@ header {
   text-shadow: 0px 0px 10px #58a6ff;
 }
 
-#mensaje {
+section {
   margin-top: 2em;
-  font-size: 2em;
-  font-weight: bold;
-  font-style: italic;
-  color: #d2a8ff;
-  text-shadow: 0px 0px 15px #d2a8ff;
-  animation: brillo 2s infinite alternate;
 }
 
-@keyframes brillo {
-  from { opacity: 0.7; }
-  to { opacity: 1; }
-}
-
-#gipy {
-  width: 450px;
-  height: 500px;
-  display: block;
-  margin: 2em auto;
+input[type="text"] {
+  padding: 0.6em;
+  font-size: 1em;
+  border: 1px solid #58a6ff;
+  border-radius: 8px;
+  background-color: #161b22;
+  color: #c9d1d9;
+  margin-bottom: 1em;
+  width: 80%;
+  max-width: 400px;
 }
 
 button {
@@ -61,11 +55,15 @@ button:hover {
   transform: scale(1.05);
 }
 
-footer {
-  margin-top: 3em;
-  padding: 2em;
-  font-style: italic;
-  font-size: 0.9em;
-  color: #8b949e;
-  border-top: 1px solid #30363d;
+#mensajeEspecial {
+  margin-top: 2em;
+  font-size: 1.3em;
+  color: #d2a8ff;
+  padding: 1em;
+  animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
 }
