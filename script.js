@@ -20,18 +20,34 @@ let nombre = ""; // Variable para guardar el nombre del usuario
 iniciarBtn.addEventListener('click', () => {
   const nombreInput = document.getElementById('nombreUsuario').value.trim(); // Obtenemos el valor del input
 
+// Declaramos la lista de nombres permitidos
+const nombresPermitidos = ["Gustavo", "Gris", "Bassman", "Chinikis", "Eduardo"];
+
+// Evento al hacer clic en el botón "Comenzar"
+iniciarBtn.addEventListener('click', () => {
+  const nombreInput = document.getElementById('nombreUsuario').value.trim();
+
+  // Verificamos que el nombre no esté vacío
   if (nombreInput !== "") {
-    nombre = nombreInput; // Guardamos el nombre
-    saludo.textContent = `Bien, ${nombre}.`; // Personalizamos el saludo
-    pregunta.textContent = `¿Qué es lo que más te impulsa a seguir adelante?`; // Mostramos la siguiente pregunta
+    // Si el nombre está en la lista permitida...
+    if (nombresPermitidos.includes(nombreInput)) {
+      nombre = nombreInput;
+      saludo.textContent = `Bien, ${nombre}.`;
+      pregunta.textContent = `¿Qué es lo que más te impulsa a seguir adelante?`;
 
-    // Ocultamos la introducción y mostramos la siguiente sección
-    intro.style.display = 'none';
-    desafio.style.display = 'block';
-
-    musica.play(); // Iniciamos el audio motivacional
+      // Cambia de pantalla y reproduce música
+      intro.style.display = 'none';
+      desafio.style.display = 'block';
+      musica.play();
+    } else {
+      // Si no está en la lista, muestra un mensaje alternativo
+      mensajeEspecial.innerHTML = `
+        <p><strong>${nombreInput}</strong>, el creador no te reconoció en su lista... pero cada quien forja su propio destino.</p>
+      `;
+    }
   }
 });
+
 
 // Evento que se activa al hacer clic en el botón "Continuar"
 continuarBtn.addEventListener('click', () => {
