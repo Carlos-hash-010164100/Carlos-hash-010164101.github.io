@@ -14,13 +14,13 @@ const mensajeEspecial = document.getElementById('mensajeEspecial');// Respuesta 
 // 🎵 Reproductor de audio
 const musica = document.getElementById('musica');
 
-// 🧠 Variable para almacenar el nombre del usuario
+// 🧠 Variable para almacenar el nombre original
 let nombre = "";
 
-// 👥 Lista de usuarios reconocidos por el "creador"
-const nombresPermitidos = ["Gustavo", "Gris", "Bassman", "Chinikis", "Eduardo"];
+// 👥 Lista de usuarios reconocidos en minúsculas
+const nombresPermitidos = ["gustavo", "gris", "bassman", "chinikis", "eduardo"];
 
-// 📦 Funciones para cada persona reconocida
+// 📦 Funciones personalizadas para cada persona
 function iniciarGustavo() {
   saludo.innerHTML = `Bien, Gustavo.<br> Eres un clásico. Sabemos que vienes con la mejor actitud.`;
   pregunta.textContent = `¿Qué te motiva a seguir creyendo?`;
@@ -46,59 +46,57 @@ function iniciarEduardo() {
   pregunta.textContent = `¿Qué propósito te empuja a levantarte cada mañana?`;
 }
 
-// 🚪 Evento que se activa al hacer clic en "Comenzar"
+// 🚪 Evento para cuando se hace clic en "Comenzar"
 iniciarBtn.addEventListener('click', () => {
-  const nombreInput = document.getElementById('nombreUsuario').value.trim();
+  const nombreOriginal = document.getElementById('nombreUsuario').value.trim();     // Nombre tal como lo escribió el usuario
+  const nombreInput = nombreOriginal.toLowerCase();                                 // Nombre convertido a minúsculas para comparar
 
-  // Verificamos que el campo no esté vacío
   if (nombreInput !== "") {
-    // Si el nombre está en la lista de acceso
     if (nombresPermitidos.includes(nombreInput)) {
-      nombre = nombreInput;
+      nombre = nombreOriginal; // Guardamos el original para mostrarlo con estilo
 
-      // Elegimos el bloque personalizado según el nombre
-      switch (nombre) {
-        case "Gustavo":
+      // Elegimos la función personalizada según el nombre ingresado
+      switch (nombreInput) {
+        case "gustavo":
           iniciarGustavo();
           break;
-        case "Gris":
+        case "gris":
           iniciarGris();
           break;
-        case "Bassman":
+        case "bassman":
           iniciarBassman();
           break;
-        case "Chinikis":
+        case "chinikis":
           iniciarChinikis();
           break;
-        case "Eduardo":
+        case "eduardo":
           iniciarEduardo();
           break;
       }
 
-      // Mostramos siguiente sección y reproducimos audio
+      // Mostramos la siguiente sección y reproducimos música
       intro.style.display = 'none';
       desafio.style.display = 'block';
       musica.play();
     } else {
-      // Si no está en la lista, mostramos un mensaje alternativo
+      // Si el nombre no está en la lista, mostramos este mensaje
       mensajeEspecial.innerHTML = `
-        <p><strong>${nombreInput}</strong>, el creador no te reconoció en su lista... pero cada quien forja su propio destino.</p>
+        <p><strong>${nombreOriginal}</strong>, el creador no te reconoció en su lista... pero cada quien forja su propio destino.</p>
       `;
     }
   }
 });
 
-// 🔄 Evento que se activa al hacer clic en "Continuar"
+// 🔄 Evento para cuando se hace clic en "Continuar"
 continuarBtn.addEventListener('click', () => {
   const respuesta = document.getElementById('respuestaUsuario').value.trim();
 
-  // Si el usuario respondió algo, mostramos mensaje final personalizado
   if (respuesta !== "") {
     mensajeEspecial.innerHTML = `
       <p><em>${nombre}</em>, nunca olvides que tu motivación — <strong>${respuesta}</strong> — es tu superpoder. ¡Sigue adelante!</p>
     `;
 
-    // Ocultamos sección de desafío
+    // Ocultamos la sección de preguntas y mostramos el mensaje final
     desafio.style.display = 'none';
   }
 });
