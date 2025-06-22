@@ -1,31 +1,36 @@
+/* Estilos globales del cuerpo de la página */
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0 1em 3em 1em;
-  background-color: #0d1117;
-  color: #58a6ff;
-  text-align: center;
+  font-family: 'Poppins', sans-serif;  /* Tipografía limpia y moderna */
+  margin: 0;                           /* Quita márgenes por defecto */
+  padding: 0 1em 3em 1em;              /* Espaciado interno (último valor es inferior) */
+  background-color: #0d1117;           /* Fondo oscuro elegante */
+  color: #58a6ff;                      /* Texto azul claro */
+  text-align: center;                  /* Centra todos los textos por defecto */
 }
 
+/* Contenedor principal con ancho máximo */
 .contenedor {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 900px;        /* Limita el ancho a 900px */
+  margin: 0 auto;          /* Centra el contenedor horizontalmente */
 }
 
+/* Encabezado visual */
 header {
-  background: rgba(88, 166, 255, 0.1);
-  padding: 1em;
-  border-bottom: 2px solid #58a6ff;
+  background: rgba(88, 166, 255, 0.1); /* Fondo translúcido azul */
+  padding: 1em;                        /* Espaciado interno uniforme */
+  border-bottom: 2px solid #58a6ff;   /* Línea inferior decorativa */
   font-size: 1.8em;
   font-style: italic;
   color: #58a6ff;
-  text-shadow: 0px 0px 10px #58a6ff;
+  text-shadow: 0px 0px 10px #58a6ff;  /* Brillo azul alrededor del texto */
 }
 
+/* Separación general entre secciones */
 section {
   margin-top: 2em;
 }
 
+/* Estilo de los campos de texto */
 input[type="text"] {
   padding: 0.6em;
   font-size: 1em;
@@ -38,6 +43,7 @@ input[type="text"] {
   max-width: 400px;
 }
 
+/* Botones generales */
 button {
   background-color: transparent;
   border: 2px solid #d2a8ff;
@@ -50,19 +56,22 @@ button {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* Efecto visual al pasar el cursor sobre el botón */
 button:hover {
   background-color: #161b22;
-  transform: scale(1.05);
+  transform: scale(1.05); /* Agranda el botón suavemente */
 }
 
+/* Mensaje motivacional final */
 #mensajeEspecial {
   margin-top: 2em;
   font-size: 1.3em;
   color: #d2a8ff;
   padding: 1em;
-  animation: brillo 2s infinite alternate;
+  animation: brillo 2s infinite alternate; /* Le da un parpadeo suave */
 }
 
+/* Animación de parpadeo (brillo) */
 @keyframes brillo {
   from { opacity: 0.7; }
   to { opacity: 1; }
