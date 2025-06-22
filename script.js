@@ -32,9 +32,33 @@ function iniciarGris() {
 }
 
 function iniciarBassman() {
-  saludo.innerHTML = `Bassman, el ritmo te precede.<br> Bienvenido a tu sala de afinación interior.`;
+  // Mensaje inicial personalizado
+  saludo.innerHTML = `Bassman, el ritmo te precede.<br>Bienvenido a tu sala de afinación interior.`;
   pregunta.textContent = `¿Qué melodía guía tus pasos últimamente?`;
+
+  // Redefinir el evento del botón "Continuar" solo para Bassman
+  continuarBtn.onclick = () => {
+    const respuesta = document.getElementById('respuestaUsuario').value.trim();
+
+    if (respuesta !== "") {
+      mensajeEspecial.innerHTML = `
+        <p><strong>Excelente melodía.</strong></p>
+        <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>
+        Sigue esforzándote. 🎸</p>
+        <pre style="color: #d2a8ff; font-size: 0.8em; line-height: 1em;">
+     ____
+    |___ \\        ♪
+     __) |  ______
+    |__ <  |______|
+    ___) |
+   |____/
+        </pre>
+      `;
+      desafio.style.display = 'none';
+    }
+  };
 }
+
 
 function iniciarChinikis() {
   saludo.innerHTML = `Chinikis 😄<br> ¿Otra vez salvando el día? Adelante, esta es tu casa.`;
