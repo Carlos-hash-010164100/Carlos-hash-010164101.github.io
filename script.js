@@ -11,16 +11,16 @@ const saludo = document.getElementById('saludoPersonalizado');
 const pregunta = document.getElementById('preguntaSiguiente');
 const mensajeEspecial = document.getElementById('mensajeEspecial');
 
-// 🎵 Música
+// 🎵 Reproductor de audio
 const musica = document.getElementById('musica');
 
-// 🧠 Nombre original
+// 🧠 Nombre del usuario
 let nombre = "";
 
-// 👥 Nombres válidos
+// 👥 Lista de nombres permitidos
 const nombresPermitidos = ["gustavo", "gris", "griselda", "bassman", "chinikis", "eduardo", "luis"];
 
-// 🧩 Funciones personalizadas
+// 🔹 Función para Gustavo
 function iniciarGustavo() {
   saludo.innerHTML = `Bien, Gustavo.<br> Eres un clásico. Sabemos que vienes con la mejor actitud.`;
   pregunta.textContent = `¿Qué te motiva a seguir creyendo?`;
@@ -30,13 +30,14 @@ function iniciarGustavo() {
     if (respuesta !== "") {
       mensajeEspecial.innerHTML = `
         <p><strong>${nombre}</strong>, tu fuerza interior es real. Mantente firme.</p>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
+// 🔹 Función para Gris y Griselda
 function iniciarGris() {
   saludo.innerHTML = `Hola Gris 🌫️<br> Siempre tan misteriosa como brillante.`;
   pregunta.textContent = `Si pudieras tener un pastel ahora mismo... ¿de qué sabor lo pedirías?`;
@@ -55,13 +56,14 @@ function iniciarGris() {
         ~~~~~~~~~~~~~~~~~~~~~~~
         🎂 Suerte, Gris 🎂
         </pre>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
+// 🔹 Función para Bassman y Gustavo alternativo
 function iniciarBassman() {
   saludo.innerHTML = `Saludos Gustavo, La música sí es un arte.`;
   pregunta.textContent = `¿Qué melodía guía tus pasos últimamente?`;
@@ -73,13 +75,14 @@ function iniciarBassman() {
         <p><strong>Excelente melodía.</strong></p>
         <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>Sigue esforzándote. 🎸</p>
         <p>"Tenemos el arte para no morir de la verdad."<br>– Friedrich Nietzsche</p>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
+// 🔹 Función para Chinikis, Eduardo, Luis
 function iniciarChinikis() {
   saludo.innerHTML = `Chinikis 😄<br> ¿Otra vez salvando el día? Adelante, esta es tu casa.`;
   pregunta.textContent = `Recuerda que la ruta rápida, no siempre y casi nunca es la más segura. Saludos, saca el kikirikí.`;
@@ -89,13 +92,14 @@ function iniciarChinikis() {
     if (respuesta !== "") {
       mensajeEspecial.innerHTML = `
         <p>⚡ Gracias por estar aquí, <strong>${nombre}</strong>. Confía en tu camino.</p>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
+// 🔹 Función para Eduardo
 function iniciarEduardo() {
   saludo.innerHTML = `Eduardo, mente brillante y corazón leal.<br> Este espacio está hecho para ti.`;
   pregunta.textContent = `¿Qué propósito te empuja a levantarte cada mañana?`;
@@ -105,14 +109,14 @@ function iniciarEduardo() {
     if (respuesta !== "") {
       mensajeEspecial.innerHTML = `
         <p><strong>${nombre}</strong>, sigue siendo ejemplo de integridad y visión. El mundo te necesita despierto.</p>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
       desafio.style.display = 'none';
     }
   };
 }
 
-// 🚪 Evento para comenzar
+// 🎬 Evento al hacer clic en "Comenzar"
 iniciarBtn.addEventListener('click', () => {
   const nombreOriginal = document.getElementById('nombreUsuario').value.trim();
   const nombreInput = nombreOriginal.toLowerCase();
@@ -138,7 +142,7 @@ iniciarBtn.addEventListener('click', () => {
         default:
           mensajeEspecial.innerHTML = `
             <p><strong>${nombreOriginal}</strong>, no se reconoce este nombre... pero el viaje aún puede comenzar.</p>
-            <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+            <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
           `;
           return;
       }
@@ -149,23 +153,20 @@ iniciarBtn.addEventListener('click', () => {
     } else {
       mensajeEspecial.innerHTML = `
         <p><strong>${nombreOriginal}</strong>, el creador no te reconoció en su lista... pero cada quien forja su propio destino.</p>
-        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+        <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
       `;
     }
   }
 });
 
-// 🔁 Fallback por si no hay función personalizada
+// 🔁 Fallback si no hay función personalizada activa
 continuarBtn.addEventListener('click', () => {
   const respuesta = document.getElementById('respuestaUsuario').value.trim();
-
   if (respuesta !== "") {
     mensajeEspecial.innerHTML = `
       <p><em>${nombre}</em>, nunca olvides que tu motivación — <strong>${respuesta}</strong> — es tu superpoder. ¡Sigue adelante!</p>
-      <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí, para confirmar tu asistencia.</p>
+      <p>👉 Regala un me gusta en el enlace en <strong>WhatsApp</strong> si llegaste hasta aquí.</p>
     `;
     desafio.style.display = 'none';
   }
 });
-
-
