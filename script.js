@@ -103,24 +103,31 @@ iniciarBtn.addEventListener('click', () => {
     if (nombresPermitidos.includes(nombreInput)) {
       nombre = nombreOriginal; // Guardamos el original para mostrarlo con estilo
 
-      // Elegimos la función personalizada según el nombre ingresado
-      switch (nombreInput) {
-        case "gustavo":
-          iniciarGustavo();
-          break;
-        case "gris":
-          iniciarGris();
-          break;
-        case "bassman":
-          iniciarBassman();
-          break;
-        case "chinikis":
-          iniciarChinikis();
-          break;
-        case "eduardo":
-          iniciarEduardo();
-          break;
-      }
+switch (nombreInput) {
+  case "gustavo":
+  case "bassman":
+    iniciarBassman(); // Ambos activan el bloque de Bassman
+    break;
+
+  case "gris":
+  case "griselda":
+    iniciarGris(); // Ambas activan el bloque de Gris
+    break;
+
+  case "chinikis":
+  case "eduardo":
+  case "luis":
+    iniciarChinikis(); // Comparten bloque de Chinikis
+    break;
+
+  default:
+    // Si llegara a pasar, aunque ya filtramos antes
+    mensajeEspecial.innerHTML = `
+      <p><strong>${nombreOriginal}</strong>, no se reconoce este nombre... pero el viaje aún puede comenzar.</p>
+    `;
+    break;
+}
+
 
       // Mostramos la siguiente sección y reproducimos música
       intro.style.display = 'none';
