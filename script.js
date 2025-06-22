@@ -18,7 +18,8 @@ const musica = document.getElementById('musica');
 let nombre = "";
 
 // 👥 Lista de usuarios reconocidos en minúsculas
-const nombresPermitidos = ["gustavo", "gris", "bassman", "chinikis", "eduardo"];
+const nombresPermitidos = const nombresPermitidos = ["gustavo", "gris", "griselda", "bassman", "chinikis", "eduardo", "luis"];
+
 
 // 📦 Funciones personalizadas para cada persona
 function iniciarGustavo() {
