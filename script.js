@@ -45,15 +45,8 @@ function iniciarBassman() {
         <p><strong>Excelente melodía.</strong></p>
         <p>No tengo mucho para ti, <strong>${nombre}</strong>... solo desearte suerte.<br>
         Sigue esforzándote. 🎸</p>
-        <pre style="color: #d2a8ff; font-size: 0.8em; line-height: 1em;">
-     ____
-    |___ \\        ♪
-     __) |  ______
-    |__ <  |______|
-    ___) |
-   |____/
-        </pre>
-      `;
+        
+      ;
       desafio.style.display = 'none';
     }
   };
