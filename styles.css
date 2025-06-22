@@ -1,34 +1,37 @@
 /* Estilos globales del cuerpo de la página */
 body {
-  font-family: 'Poppins', sans-serif;  /* Tipografía limpia y moderna */
+  font-family: 'Poppins', sans-serif;            /* Tipografía limpia y moderna */
   margin: 0;
-  padding: 0 1em 3em 1em;
-  background-image: url('casino-fondo.jpg'); /* Imagen de fondo: entrada elegante al casino */
-  background-size: cover;              /* La imagen cubrirá todo el fondo */
-  background-position: center;         /* Centrada horizontalmente y verticalmente */
-  background-repeat: no-repeat;        /* No se repite la imagen */
-  background-attachment: fixed;        /* Hace que el fondo permanezca fijo al hacer scroll */
-  background-color: #0d1117;           /* Color de fondo de respaldo si la imagen no carga */
-  color: #58a6ff;                      /* Color de texto */
+  padding: 0;
+  background-image: url('casino-fondo.jpg');     /* Imagen de fondo: entrada elegante al casino */
+  background-size: cover;                        /* La imagen cubrirá todo el fondo */
+  background-position: center;                   /* Centrada horizontal y verticalmente */
+  background-repeat: no-repeat;                  /* No se repite */
+  background-attachment: fixed;                  /* Fondo fijo al hacer scroll */
+  background-color: #0d1117;                     /* Color de respaldo */
+  color: #f0f8ff;                                /* Texto más claro */
   text-align: center;
 }
 
-
-/* Contenedor principal con ancho máximo */
+/* Fondo semitransparente para mejorar visibilidad del texto */
 .contenedor {
-  max-width: 900px;        /* Limita el ancho a 900px */
-  margin: 0 auto;          /* Centra el contenedor horizontalmente */
+  max-width: 900px;                              /* Ancho máximo del contenido */
+  margin: 0 auto;
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6);           /* Capa negra semitransparente */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);        /* Sombra para resaltar el bloque */
 }
 
 /* Encabezado visual */
 header {
-  background: rgba(88, 166, 255, 0.1); /* Fondo translúcido azul */
-  padding: 1em;                        /* Espaciado interno uniforme */
-  border-bottom: 2px solid #58a6ff;   /* Línea inferior decorativa */
+  background: rgba(88, 166, 255, 0.15);           /* Fondo azulado translúcido más suave */
+  padding: 1em;
+  border-bottom: 2px solid #58a6ff;
   font-size: 1.8em;
   font-style: italic;
   color: #58a6ff;
-  text-shadow: 0px 0px 10px #58a6ff;  /* Brillo azul alrededor del texto */
+  text-shadow: 0px 0px 12px #58a6ff;              /* Brillo azul más intenso */
 }
 
 /* Separación general entre secciones */
@@ -42,11 +45,12 @@ input[type="text"] {
   font-size: 1em;
   border: 1px solid #58a6ff;
   border-radius: 8px;
-  background-color: #161b22;
-  color: #c9d1d9;
+  background-color: #0c121c;                     /* Más oscuro que antes */
+  color: #f0f8ff;                                 /* Texto claro */
   margin-bottom: 1em;
   width: 80%;
   max-width: 400px;
+  box-shadow: 0 0 10px rgba(210, 168, 255, 0.2);
 }
 
 /* Botones generales */
@@ -59,13 +63,14 @@ button {
   border-radius: 10px;
   cursor: pointer;
   font-style: italic;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Efecto visual al pasar el cursor sobre el botón */
 button:hover {
-  background-color: #161b22;
-  transform: scale(1.05); /* Agranda el botón suavemente */
+  background-color: rgba(210, 168, 255, 0.05);     /* Sutil brillo al pasar */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #d2a8ff;
 }
 
 /* Mensaje motivacional final */
@@ -74,7 +79,7 @@ button:hover {
   font-size: 1.3em;
   color: #d2a8ff;
   padding: 1em;
-  animation: brillo 2s infinite alternate; /* Le da un parpadeo suave */
+  animation: brillo 2s infinite alternate;         /* Brillo suave */
 }
 
 /* Animación de parpadeo (brillo) */
