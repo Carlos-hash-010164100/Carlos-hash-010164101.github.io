@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sigue Adelante</title>
+  <title>Inicia Tu Aventura</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Lo que buscas... también te está buscando.</h1>
-    <p><strong>El camino no es fácil, pero cada paso deja huella.</strong></p>
+    <h1>Bienvenido a tu historia</h1>
+    <p><strong>Cada aventura comienza con una sola palabra...</strong></p>
   </header>
 
   <main class="contenedor">
-    <section id="mensaje">
-      <blockquote>
-        “Los sueños parecen lejanos... hasta que decides alcanzarlos.”
-      </blockquote>
-      <cite>— C.S.</cite>
+    <!-- Sección de bienvenida -->
+    <section id="intro">
+      <h2>¡Hola, viajero!</h2>
+      <p>¿Cómo te llamas?</p>
+      <input type="text" id="nombreUsuario" placeholder="Ingresa tu nombre" />
+      <button id="iniciar">Comenzar</button>
     </section>
 
-    <figure id="gipy">
-      <img src="giphy.gif" alt="Animación motivadora" />
-    </figure>
+    <!-- Sección de desafío/pregunta siguiente -->
+    <section id="desafio" style="display: none;">
+      <h2 id="saludoPersonalizado"></h2>
+      <p id="preguntaSiguiente"></p>
+      <input type="text" id="respuestaUsuario" placeholder="Escribe tu respuesta..." />
+      <button id="continuar">Continuar</button>
+    </section>
 
-    <button id="boton">Mensaje</button>
-
+    <!-- Mensaje final personalizado -->
     <div id="mensajeEspecial"></div>
 
+    <!-- Audio motivacional -->
     <audio id="musica" src="motivacion.mp3" preload="auto"></audio>
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
