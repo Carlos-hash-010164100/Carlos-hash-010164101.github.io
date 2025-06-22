@@ -18,7 +18,7 @@ const musica = document.getElementById('musica');
 let nombre = "";
 
 // 👥 Lista de usuarios reconocidos en minúsculas
-const nombresPermitidos = const nombresPermitidos = ["gustavo", "gris", "griselda", "bassman", "chinikis", "eduardo", "luis"];
+const nombresPermitidos = ["gustavo", "gris", "griselda", "bassman", "chinikis", "eduardo", "luis"];
 
 
 // 📦 Funciones personalizadas para cada persona
@@ -87,7 +87,7 @@ function iniciarBassman() {
 
 function iniciarChinikis() {
   saludo.innerHTML = `Chinikis 😄<br> ¿Otra vez salvando el día? Adelante, esta es tu casa.`;
-  pregunta.textContent = `¿Qué te hace sonreír incluso en días difíciles?`;
+  pregunta.textContent = `Recuerda que la ruta rapida, no siempre y casi nunca es la mas segura. Saludos Saca el kikiriki`;
 }
 
 function iniciarEduardo() {
