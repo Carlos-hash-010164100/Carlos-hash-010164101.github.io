@@ -47,5 +47,11 @@ button:hover {
     background-color: #222222;
     transform: scale(1.05);
 }
+#gipy {
+    width: 450px;
+    height: 500px; /* Corregí '500pc' por '500px' */
+    display: block;
+    margin: 0 auto;
+}
 
 
