@@ -1,3 +1,5 @@
+/* se rompio todo para eliminar la pagina
+
 // 🎮 Botones de interacción
 const iniciarBtn = document.getElementById('iniciar');
 const continuarBtn = document.getElementById('continuar');
@@ -26,7 +28,7 @@ function escaparHTML(entrada) {
   div.textContent = entrada;
   return div.innerHTML;
 }
-
+*/
 // 🔹 Funciones personalizadas para cada usuario
 function iniciarGustavo() {
   saludo.innerHTML = `Bien, Gustavo.<br> Eres un clásico. Sabemos que vienes con la mejor actitud.`;
@@ -162,3 +164,4 @@ continuarBtn.addEventListener('click', () => {
     desafio.style.display = 'none';
   }
 });
+
