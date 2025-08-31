@@ -3,7 +3,7 @@ body {
   font-family: 'Poppins', sans-serif;            /* Tipografía limpia y moderna */
   margin: 0;
   padding: 0;
-  background-image: url('casino-fondo.jpg');     /* Imagen de fondo: entrada elegante al casino */
+  background-image: url('giphy.gif');     /* Imagen de fondo: entrada elegante al casino */
   background-size: cover;                        /* La imagen cubrirá todo el fondo */
   background-position: center;                   /* Centrada horizontal y verticalmente */
   background-repeat: no-repeat;                  /* No se repite */
@@ -87,4 +87,5 @@ button:hover {
   from { opacity: 0.7; }
   to { opacity: 1; }
 }
+
 
